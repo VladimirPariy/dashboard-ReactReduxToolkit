@@ -2,8 +2,10 @@ import { Badge } from '../UI/Badge';
 import { Card } from '../UI/Card';
 import { Stack } from '../UI/Stack';
 
-
 const FilterPanel = () => {
+
+
+
   return (
     <Card className="filter-panel">
       <div className="filter-panel-wrapper">
