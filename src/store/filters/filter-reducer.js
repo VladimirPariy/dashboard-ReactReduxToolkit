@@ -3,7 +3,10 @@ import {ADD_FILTER, REMOVE_FILTER, CLEAR_FILTER} from "./filter-actions";
 export const filterReducer = (state = [], action) => {
     switch (action.type) {
         case ADD_FILTER:{
-            return [...state, action.payload]
+            if(!state.includes(action.payload)){
+                return [...state, action.payload]
+            }
+            return state
         }
         case REMOVE_FILTER:{
             return state.filter(item => item !== action.payload)
